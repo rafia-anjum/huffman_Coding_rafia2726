@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Huffman Coding Visualizer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <div class="logo">HC</div>
+
+            <div>
+                <h1>Huffman Coding</h1>
+                <p>Lossless Data Compression Visualizer</p>
+            </div>
+        </header>
+
+
+        <!-- Input Section -->
+        <section class="card input-card">
+
+            <h2>Enter Your Text</h2>
+
+            <textarea
+                id="inputText"
+                placeholder="Type or paste your text here..."
+            ></textarea>
+
+            <div class="button-area">
+
+                <button class="primary-btn" onclick="generateHuffman()">
+                    Generate Huffman Code
+                </button>
+
+                <button class="clear-btn" onclick="clearAll()">
+                    Clear
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <span>Original Size</span>
+                <strong id="originalSize">0 bits</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Compressed Size</span>
+                <strong id="compressedSize">0 bits</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Compression Ratio</span>
+                <strong id="compressionRatio">0%</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Characters</span>
+                <strong id="characterCount">0</strong>
+            </div>
+
+        </section>
+
+
+        <!-- Main Grid -->
+        <div class="grid">
+
+
+            <!-- Frequency Table -->
+            <section class="card">
+
+                <h2>Character Frequency</h2>
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Character</th>
+                            <th>Frequency</th>
+                            <th>Probability</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="frequencyTable">
+                    </tbody>
+
+                </table>
+
+            </section>
+
+
+            <!-- Huffman Codes -->
+            <section class="card">
+
+                <h2>Huffman Codes</h2>
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Character</th>
+                            <th>Code</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="codeTable">
+                    </tbody>
+
+                </table>
+
+            </section>
+
+        </div>
+
+
+        <!-- Encoded Result -->
+        <section class="card">
+
+            <h2>Encoded Data</h2>
+
+            <div id="encodedText" class="encoded-box">
+                Your encoded data will appear here...
+            </div>
+
+        </section>
+
+
+        <!-- Decode -->
+        <section class="card">
+
+            <h2>Decode Huffman Data</h2>
+
+            <textarea
+                id="decodeInput"
+                placeholder="Paste encoded binary data here..."
+            ></textarea>
+
+            <button class="primary-btn" onclick="decodeHuffman()">
+                Decode
+            </button>
+
+            <div id="decodedText" class="decoded-box">
+                Decoded text will appear here...
+            </div>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer>
+            <p>Huffman Coding Visualizer • Data Structures & Algorithms</p>
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
